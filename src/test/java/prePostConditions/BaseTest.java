@@ -4,6 +4,7 @@ import config.Config;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import utils.TestUtils;
 
 import java.io.IOException;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -22,6 +23,7 @@ public class BaseTest {
     }
     @AfterAll
     public void tearDown(){
+        TestUtils.sleep(5000);
         driver.quit();
     }
 }
