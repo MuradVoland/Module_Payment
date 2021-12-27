@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +29,8 @@ public class GppPage {
         goOnButton.click();
     }
     public void clickConfirmAndGoOnButton(){    //Second GPP Page
-        confirmAndGoButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.elementToBeClickable(confirmAndGoButton)).click();
     }
     public String getSuccessMessage(){       // Third GPP Page
         driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
