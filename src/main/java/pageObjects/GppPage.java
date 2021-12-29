@@ -23,6 +23,7 @@ public class GppPage {
     @FindBy(xpath = "//div[@class='payment_success']/h2") private WebElement actualResult;
 
     public void inputCardField() throws IOException { // First GPP Page
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         cardField.sendKeys(Config.getCardId());
     }
     public void clickGoOnButton(){    // First GPP Page
@@ -33,7 +34,7 @@ public class GppPage {
         wait.until(ExpectedConditions.elementToBeClickable(confirmAndGoButton)).click();
     }
     public String getSuccessMessage(){       // Third GPP Page
-        driver.manage().timeouts().pageLoadTimeout(30,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
         return actualResult.getText();
     }
     public void gppPageMethods() throws IOException{

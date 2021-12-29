@@ -5,7 +5,6 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import utils.TestUtils;
-
 import java.io.IOException;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 

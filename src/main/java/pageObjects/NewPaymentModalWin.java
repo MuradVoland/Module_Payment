@@ -21,15 +21,15 @@ public class NewPaymentModalWin {
     @FindBy(xpath = "//button[@id='onlinePaymentClassificationCodeModalAddBtn']") private WebElement addButton;
 
     public void clickDestinationDropdown(){
-        TestUtils.sleep(2000);
+        TestUtils.sleep(1000);
         destinationDropdown.sendKeys("Vergi");
-        TestUtils.sleep(2000);
+        TestUtils.sleep(1000);
         destinationDropdown.sendKeys(Keys.ENTER);
     }
     public void selectValueOfDestinationDropdown() {
-        TestUtils.sleep(2000);
+        TestUtils.sleep(1000);
         valueOfDestinationDropdown.sendKeys("111111");
-        TestUtils.sleep(2000);
+        TestUtils.sleep(1000);
         valueOfDestinationDropdown.sendKeys(Keys.ENTER);
     }
     public void clickAddButton() {
