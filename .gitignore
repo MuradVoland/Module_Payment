@@ -27,4 +27,3 @@ hs_err_pid*
 .bin
 *.kotlin_module
 target
-.allure
